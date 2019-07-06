@@ -1,0 +1,30 @@
+{
+  "name": "booklib",
+  "version": "1.0.0",
+  "description": "Crowd Source Textbook for university",
+  "main": "app.js",
+  "author": "Team InSync",
+  "license": "MIT",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "pkg": {
+    "scripts": "public/**/*.js",
+    "assets": "public/**/*"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "cookie-parser": "^1.4.3",
+    "cors": "^2.8.4",
+    "express": "^4.16.4",
+    "express-handlebars": "^3.0.0",
+    "express-session": "^1.15.6",
+    "mongoose": "^5.3.4",
+    "passport": "^0.4.0",
+    "passport-google-oauth20": "^1.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.4"
+  }
+}

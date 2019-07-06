@@ -1,0 +1,299 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+
+<head>
+	<title>BookLib - Cyber Library</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="description" content="Template by CocoBasic" />
+	<meta name="keywords" content="HTML, CSS, JavaScript, PHP" />
+	<meta name="author" content="CocoBasic" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="stylesheet" href="rajcontro/css/reset.css"> <!-- CSS reset -->
+	<link rel="stylesheet" href="rajcontro/css/style.css"> <!-- Resource style -->
+	<script src="rajcontro/js/modernizr.js"></script> <!-- Modernizr -->
+	<link rel="shortcut icon" href="images/favicon.ico" />
+	<link href='http://fonts.googleapis.com/css?family=League+Script%7CPoppins:300,400,500,600,700%7CMontserrat:900' rel='stylesheet'
+	 type='text/css'>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+	 crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href='css/style.css' />
+	<script src="api/apiKey.js"></script>
+	<script src="api/sessionCheck.js"></script>
+</head>
+
+<body>
+	<div class="site-wrapper">
+		<header class="header-holder">
+			<div class="menu-wrapper center-relative relative">
+				<a class="navbar-brand" href="index.html" style="font-size: 30px;display: inline-block">
+					BookLib
+				</a>
+				<div class="toggle-holder">
+					<div id="toggle" class="">
+						<div class="first-menu-line"></div>
+						<div class="second-menu-line"></div>
+						<div class="third-menu-line"></div>
+					</div>
+				</div>
+
+				<div class="menu-holder">
+					<nav id="header-main-menu">
+						<ul class="main-menu sm sm-clean">
+							<li>
+								<a href="index.html">Feeds</a>
+							</li>
+							<li>
+								<a href="betabooks.html">Beta Books</a>
+							</li>
+							<li>
+								<a href="newbook.html">Contribute Us</a>
+							</li>
+							<li>
+								<a href="profile.html">Profile</a>
+							</li>
+							<li>
+								<a href="/auth/google">Sign IN</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+				<div class="clear"></div>
+			</div>
+		</header>
+		<div class="site-wrapper">
+			<div class="doc-loader">
+				<img src="images/preloader.gif" alt="BookLib">
+			</div>
+			<div id="content" class="site-content center-relative">
+				<!-- SERVICES SECTION -->
+				<div id="feeds" class="section" style="margin-top: 10px;">
+					<div class="block content-1070 center-relative section-content">
+						<br>
+						<div class="block content-1070 center-relative section-content">
+							<h2 class="entry-title" style="font-size: 30px">New Books</h2>
+							<p class="page-description">Support us to help everyone.</p>
+						</div>
+
+						<div class="container">
+							<div class="row justify-content-center align-items-center">
+								<div class="one_fourth last animate wait-06s col-md-5" id="addNewBooksHtml">
+									<!-- <div class="service-item relative ">
+									<img class="service-icon" src="images/nodejs.png" alt="">
+									<h5 class="service-title">Node JS</h5>
+									<div class="service-content">
+										Node.js is an open source development platform for executing JavaScript code server-side. 
+									</div>
+									<a class="service-link scroll" href="#" target="_self"></a>
+								</div> -->
+								</div>
+
+								<div class="clear"></div>
+
+								<div class="col-md-1" style="border-left: 3px solid #221c5a; height:450px;"></div>
+
+								<div class="col-md-6">
+									<div class="row">
+										<div class="col-md-12">
+											<p class="page-description" style="margin:30px;">Popular InDemand Books</p>
+											<div id="getBooks">
+												<!--button type="button" class="btn btn-primary" id="likeButton" onclick="like();">
+															FusionJS <span class="badge badge-light" id="count"></span>
+												    </button-->
+											</div>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-md-12">
+											<p class="page-description" style="margin:50px;">Suggest us a new Book!</p>
+
+											<form>
+												<div class="form-group">
+													<input type="text" class="form-control" placeholder="Book name" id="name" />
+												</div>
+												<div class="form-group">
+													<input type="text" class="form-control" placeholder="Why you need the Book ?" id="description" required />
+												</div>
+												<input type="button" class="btn pull-right" style="background-color: #221c5a; color:#ffffff;" id="submitButton"
+												 value="SUBMIT" />
+											</form>
+										</div>
+									</div>
+
+								</div>
+
+							</div>
+						</div>
+
+					</div>
+				</div>
+				<section class="cd-faq section" id="makeMeVisible" style="display: none;">
+					<div class="block content-1070 center-relative section-content">
+						<h2 class="entry-title" style="font-size: 20px">Edit Your Book</h2>
+						<p class="page-description">Sharing is Caring.</p>
+					</div>
+					<ul class="cd-faq-categories">
+						<li><a class="selected" href="#basics">Basics</a></li>
+						<li><a href="#gettingstarted">Getting Started</a></li>
+						<li><a href="#workingwithviews">Working with Views</a></li>
+					</ul> <!-- cd-faq-categories -->
+
+					<div class="cd-faq-items">
+						<ul id="basics" class="cd-faq-group">
+							<li class="cd-faq-title">
+								<h2>Basics</h2>
+							</li>
+							<li class="blog-item-holder">
+								<a class="cd-faq-trigger" href="#0" style="text-decoration: none;">What is React?</a>
+								<div class="container cd-faq-content">
+									<div class="col-sm-12" style="text-align: left">
+										Enter Your Answer.
+										<textarea class="form-control" aria-label="With textarea"></textarea>
+										<br>
+										<button id="submitBtn" class="btn btn-info">SUBMIT</button>
+										<hr>
+									</div>
+								</div>
+							</li>
+
+							<li class="blog-item-holder">
+								<a class="cd-faq-trigger" href="#0" style="text-decoration: none;">MVC Framework</a>
+								<div class="container cd-faq-content">
+									<div class="col-sm-12" style="text-align: left">
+										Enter Your Answer.
+										<textarea class="form-control" aria-label="With textarea"></textarea>
+										<br>
+										<button id="submitBtn" class="btn btn-info">SUBMIT</button>
+										<hr>
+									</div>
+							</li>
+
+							<li class="blog-item-holder">
+								<a class="cd-faq-trigger" href="#0" style="text-decoration: none;">Why use React?</a>
+								<div class="container cd-faq-content">
+									<div class="col-sm-12" style="text-align: left">
+										Enter Your Answer.
+										<textarea class="form-control" aria-label="With textarea"></textarea>
+										<br>
+										<button id="submitBtn" class="btn btn-info">SUBMIT</button>
+										<hr>
+									</div>
+							</li>
+
+						</ul> <!-- cd-faq-group -->
+
+						<ul id="gettingstarted" class="cd-faq-group">
+							<li class="cd-faq-title">
+								<h2>Getting Started</h2>
+							</li>
+							<li class="blog-item-holder">
+								<a class="cd-faq-trigger" href="#0" style="text-decoration: none;">Installation</a>
+								<div class="container cd-faq-content">
+									<div class="col-sm-12" style="text-align: left">
+										Enter Your Answer.
+										<textarea class="form-control" aria-label="With textarea"></textarea>
+										<br>
+										<button id="submitBtn" class="btn btn-info">SUBMIT</button>
+										<hr>
+
+									</div>
+							</li>
+
+							<li class="blog-item-holder">
+								<a class="cd-faq-trigger" href="#0" style="text-decoration: none;">Starting your own project</a>
+								<div class="container cd-faq-content">
+									<div class="col-sm-12" style="text-align: left">
+										Enter Your Answer.
+										<textarea class="form-control" aria-label="With textarea"></textarea>
+										<br>
+										<button id="submitBtn" class="btn btn-info">SUBMIT</button>
+										<hr>
+									</div>
+							</li>
+
+							<li class="blog-item-holder">
+								<a class="cd-faq-trigger" href="#0" style="text-decoration: none;">Creating an application</a>
+								<div class="container cd-faq-content">
+									<div class="col-sm-12" style="text-align: left">
+										Enter Your Answer.
+										<textarea class="form-control" aria-label="With textarea"></textarea>
+										<br>
+										<button id="submitBtn" class="btn btn-info">SUBMIT</button>
+										<hr>
+									</div>
+							</li>
+						</ul> <!-- cd-faq-group -->
+
+						<ul id="workingwithviews" class="cd-faq-group">
+							<li class="cd-faq-title">
+								<h2>Working with Views</h2>
+							</li>
+							<li class="blog-item-holder">
+								<a class="cd-faq-trigger" href="#0" style="text-decoration: none;">Displaying a simple template</a>
+								<div class="container cd-faq-content">
+									<div class="col-sm-12" style="text-align: left">
+										Enter Your Answer.
+										<textarea class="form-control" aria-label="With textarea"></textarea>
+										<br>
+										<button id="submitBtn" class="btn btn-info">SUBMIT</button>
+										<hr>
+									</div>
+							</li>
+
+							<li class="blog-item-holder">
+								<a class="cd-faq-trigger" href="#0" style="text-decoration: none;">Adding external templates</a>
+								<div class="container cd-faq-content">
+									<div class="col-sm-12" style="text-align: left">
+										Enter Your Answer.
+										<textarea class="form-control" aria-label="With textarea"></textarea>
+										<br>
+										<button id="submitBtn" class="btn btn-info">SUBMIT</button>
+										<hr>
+									</div>
+							</li>
+						</ul> <!-- cd-faq-group -->
+					</div> <!-- cd-faq-items -->
+					<a href="#0" class="cd-close-panel">Close</a>
+				</section> <!-- cd-faq -->
+			</div>
+			<div class="site-wrapper">
+				<div id="content" class="site-content center-relative">
+					<!--Footer-->
+					<footer class="footer">
+						<div class="footer-content content-1070 center-relative">
+
+							<ul class="copyright-holder">
+								<li class="copyright-footer">
+									© 2018 InSync.</li>
+								<li class="social-footer">
+									<a href="#">Twitter</a><a href="#">Facebook</a><a href="#">Instagram</a><a href="#">Behance</a> </li>
+							</ul>
+						</div>
+					</footer>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--Load JavaScript-->
+	<script src="api/bookCounter.js"></script>
+	<script src="api/addBook.js"></script>
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/jquery.sticky.js"></script>
+	<script src="api/getNewBook.js"></script>
+	<script type='text/javascript' src='js/imagesloaded.pkgd.js'></script>
+	<script type='text/javascript' src='js/jquery.fitvids.js'></script>
+	<script type='text/javascript' src='js/jquery.smartmenus.min.js'></script>
+	<script type='text/javascript' src='js/isotope.pkgd.js'></script>
+	<script type='text/javascript' src='js/jquery.easing.1.3.js'></script>
+	<script type='text/javascript' src='js/jquery.prettyPhoto.js'></script>
+	<script type='text/javascript' src='js/countUp.min.js'></script>
+	<script type='text/javascript' src='js/slick.min.js'></script>
+	<script type='text/javascript' src='js/main.js'></script>
+	<script src="rajcontro/js/jquery-2.1.1.js"></script>
+	<script src="rajcontro/js/jquery.mobile.custom.min.js"></script>
+	<script src="rajcontro/js/main.js"></script>
+
+
+	<script src="api/sessionCheck.js"></script>
+</body>
+
+</html>

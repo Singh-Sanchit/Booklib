@@ -1,0 +1,473 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+
+<head>
+	<title>BookLib - Cyber Library</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="description" content="Template by CocoBasic" />
+	<meta name="keywords" content="HTML, CSS, JavaScript, PHP" />
+	<meta name="author" content="CocoBasic" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="rajcontro/css/reset.css"> <!-- CSS reset -->
+	<link rel="stylesheet" href="rajcontro/css/style.css"> <!-- Resource style -->
+	<script src="rajcontro/js/modernizr.js"></script> <!-- Modernizr -->
+	<script src="api/apiKey.js"></script>
+	<link href="rajcontro/css/upvote.css" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+	 crossorigin="anonymous">
+
+	<link rel="shortcut icon" href="images/favicon.ico" />
+	<link href='http://fonts.googleapis.com/css?family=League+Script%7CPoppins:300,400,500,600,700%7CMontserrat:900' rel='stylesheet'
+	 type='text/css'>
+	<link rel="stylesheet" type="text/css" href='css/style.css' />
+	<style>
+		.triangle-up {
+				width: 0;
+				height: 0;
+				border-left: 10px solid transparent;
+				border-right: 10px solid transparent;
+				border-bottom: 12px solid #555;
+				text-decoration: none;
+			}
+
+			.triangle-up:hover{
+				border-bottom: 12px solid #000000;
+			}
+
+			.triangle-down {
+				width: 0;
+				height: 0;
+				border-left: 10px solid transparent;
+				border-right: 10px solid transparent;
+				border-top: 12px solid #555;
+				text-decoration: none;
+			}
+
+			.triangle-down:hover{
+				border-top: 12px solid #000000;
+			}
+/* Style the buttons that are used to open and close the accordion panel */
+.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .accordion:hover {
+    background-color: #ccc;
+}
+
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+    padding: 0 18px;
+    background-color: white;
+    display: none;
+    overflow: hidden;
+}
+
+		</style>
+
+	<!--[if lt IE 9]>
+<script src="js/html5.js"></script>            
+<script src="js/respond.min.js"></script>                   
+<![endif]-->
+</head>
+
+<body>
+	<div class="site-wrapper">
+		<header class="header-holder">
+			<div class="menu-wrapper center-relative relative">
+				<a class="navbar-brand" href="index.html" style="font-size: 30px;margin-top: 15px">
+					BookLib
+				</a>
+				<div class="toggle-holder">
+					<div id="toggle" class="">
+						<div class="first-menu-line"></div>
+						<div class="second-menu-line"></div>
+						<div class="third-menu-line"></div>
+					</div>
+				</div>
+
+				<div class="menu-holder">
+					<nav id="header-main-menu">
+						<ul class="main-menu sm sm-clean">
+							<li>
+								<a href="index.html">Feeds</a>
+							</li>
+							<li>
+								<a href="betabooks.html">Beta Books</a>
+							</li>
+							<li>
+								<a href="newbook.html">Contribute To Us</a>
+							</li>
+							<li>
+								<a href="profile.html">Profile</a>
+							</li>
+							<li>
+								<a href="/auth/google">Sign IN</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+				<div class="clear"></div>
+			</div>
+		</header>
+		<div class="site-wrapper">
+			<div class="doc-loader">
+				<img src="images/preloader.gif" alt="BookLib">
+			</div>
+			<div class="section">
+				<br>
+
+				<div id="content" class="site-content center-relative">
+					<div class="block content-1070 center-relative section-content">
+						<h2 class="entry-title" style="font-size: 30px">BetaBook-Django</h2>
+						<p class="page-description">Django is a web framework designed to help you build complex web applications simply
+							and quickly.</p>
+					</div>
+					<section class="cd-faq">
+						<ul class="cd-faq-categories">
+							<li><a class="selected" href="#basics">Basics</a></li>
+							<li><a href="#gettingstarted">Getting Started</a></li>
+							<li><a href="#workingwithviews">Working with Views</a></li>
+						</ul> <!-- cd-faq-categories -->
+
+						<div class="cd-faq-items">
+							<ul id="basics" class="cd-faq-group">
+								<li class="cd-faq-title">
+									<h2>Basics</h2>
+								</li>
+								<li class="blog-item-holder">
+									<a class="cd-faq-trigger" href="#0" style="text-decoration: none;">What is Django?</a>
+									<div class="container cd-faq-content">
+										<div class="main col-sm-1">
+											<a id="upButton1" type="button" onclick="upVote()" class="vote triangle-up"></a>
+											<h2 id="scoreCounter1"></h2>
+											<a id="downButton1" type="button" onclick="downVote()" class="vote triangle-down">
+											</a>
+										</div>
+										<div class="col-sm-7" style="text-align: left">
+											<p>Because Django was developed in a fast-paced newsroom environment, it was designed to make common
+												Web-development tasks fast and easy. Here’s an informal overview of how to write a database-driven Web app
+												with Django.
+											</p>
+											<p class="pull-right">-Aditya Manze</p>
+											<br>
+											<hr>
+											<br>
+											Enter Your Answer.
+											<textarea class="form-control" aria-label="With textarea"></textarea>
+											<br>
+											<button id="submitBtn">SUBMIT</button>
+										</div>
+									</div>
+									<div class="container cd-faq-content">
+										<div class="main col-sm-1">
+											<a id="upButton" type="button" onclick="upVote()" class="vote triangle-up"></a>
+											<h2 id="scoreCounter"></h2>
+											<a id="downButton" type="button" onclick="downVote()" class="vote triangle-down">
+											</a>
+										</div>
+										<div class="col-sm-7" style="text-align: left">
+											<p>Because Django was developed in a fast-paced newsroom environment, it was designed to make common
+												Web-development tasks fast and easy. Here’s an informal overview of how to write a database-driven Web app
+												with Django.
+											</p>
+											<p class="pull-right">-Aditya Manze</p>
+											<br>
+											<hr>
+											<br>
+											Enter Your Answer.
+											<textarea class="form-control" aria-label="With textarea"></textarea>
+											<br>
+											<button id="submitBtn">SUBMIT</button>
+										</div>
+									</div>
+									<div class="container cd-faq-content">
+										<div class="main col-sm-1">
+											<a id="upButton" type="button" onclick="upVote()" class="vote triangle-up"></a>
+											<h2 id="scoreCounter"></h2>
+											<a id="downButton" type="button" onclick="downVote()" class="vote triangle-down">
+											</a>
+										</div>
+										<div class="col-sm-7" style="text-align: left">
+											<p>Because Django was developed in a fast-paced newsroom environment, it was designed to make common
+												Web-development tasks fast and easy. Here’s an informal overview of how to write a database-driven Web app
+												with Django.
+											</p>
+											<p class="pull-right">-Aditya Manze</p>
+											<br>
+											<hr>
+											<br>
+											Enter Your Answer.
+											<textarea class="form-control" aria-label="With textarea"></textarea>
+											<br>
+											<button>SUBMIT</button>
+										</div>
+									</div>
+								</li>
+
+								<li class="blog-item-holder">
+									<a class="cd-faq-trigger" href="#0" style="text-decoration: none;">MVC Framework</a>
+									<div class="container cd-faq-content">
+										<div class="main col-sm-1">
+											<a id="upButton" type="button" onclick="upVote()" class="vote triangle-up"></a>
+											<h2 class="scoreCounter"></h2>
+											<a id="downButton" type="button" onclick="downVote()" class="vote triangle-down">
+											</a>
+										</div>
+										<div class="col-sm-7" style="text-align: left">
+											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae quidem blanditiis delectus corporis,
+												possimus officia sint sequi ex tenetur id impedit est pariatur iure animi non a ratione reiciendis nihil
+												sed consequatur atque repellendus fugit perspiciatis rerum et. Dolorum consequuntur fugit deleniti, soluta
+												fuga nobis. Ducimus blanditiis velit sit iste delectus obcaecati debitis omnis, assumenda accusamus cumque
+												perferendis eos aut quidem! Aut, totam rerum, cupiditate quae aperiam voluptas rem inventore quas, ex
+												maxime culpa nam soluta labore at amet nihil laborum? Explicabo numquam, sit fugit, voluptatem autem atque
+												quis quam voluptate fugiat earum rem hic, reprehenderit quaerat tempore at. Aperiam.
+											</p>
+											<p class="pull-right">-Raj Kotadia</p>
+											<br>
+											<hr>
+											<br>
+											Enter Your Answer.
+											<textarea class="form-control" aria-label="With textarea"></textarea>
+											<br>
+											id="submitBtn"
+										</div>
+								</li>
+
+								<li class="blog-item-holder">
+									<a class="cd-faq-trigger" href="#0" style="text-decoration: none;">Why use Django?</a>
+									<div class="container cd-faq-content">
+										<div class="main col-sm-1">
+											<a id="upButton" type="button" onclick="upVote()" class="vote triangle-up"></a>
+											<h2 class="scoreCounter"></h2>
+											<a id="downButton" type="button" onclick="downVote()" class="vote triangle-down">
+											</a>
+										</div>
+										<div class="col-sm-7" style="text-align: left">
+											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae quidem blanditiis delectus corporis,
+												possimus officia sint sequi ex tenetur id impedit est pariatur iure animi non a ratione reiciendis nihil
+												sed consequatur atque repellendus fugit perspiciatis rerum et. Dolorum consequuntur fugit deleniti, soluta
+												fuga nobis. Ducimus blanditiis velit sit iste delectus obcaecati debitis omnis, assumenda accusamus cumque
+												perferendis eos aut quidem! Aut, totam rerum, cupiditate quae aperiam voluptas rem inventore quas, ex
+												maxime culpa nam soluta labore at amet nihil laborum? Explicabo numquam, sit fugit, voluptatem autem atque
+												quis quam voluptate fugiat earum rem hic, reprehenderit quaerat tempore at. Aperiam.
+											</p>
+											<p class="pull-right">-Akash Rajpurohit</p>
+											<br>
+											<hr>
+											<br>
+											Enter Your Answer.
+											<textarea class="form-control" aria-label="With textarea"></textarea>
+											<br>
+											id="submitBtn"
+										</div>
+								</li>
+
+							</ul> <!-- cd-faq-group -->
+
+							<ul id="gettingstarted" class="cd-faq-group">
+								<li class="cd-faq-title">
+									<h2>Getting Started</h2>
+								</li>
+								<li class="blog-item-holder">
+									<a class="cd-faq-trigger" href="#0" style="text-decoration: none;">Installation</a>
+									<div class="container cd-faq-content">
+										<div class="main col-sm-1">
+											<a id="upButton" type="button" onclick="upVote()" class="vote triangle-up"></a>
+											<h2 class="scoreCounter"></h2>
+											<a id="downButton" type="button" onclick="downVote()" class="vote triangle-down">
+											</a>
+										</div>
+										<div class="col-sm-7" style="text-align: left">
+											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae quidem blanditiis delectus corporis,
+												possimus officia sint sequi ex tenetur id impedit est pariatur iure animi non a ratione reiciendis nihil
+												sed consequatur atque repellendus fugit perspiciatis rerum et. Dolorum consequuntur fugit deleniti, soluta
+												fuga nobis. Ducimus blanditiis velit sit iste delectus obcaecati debitis omnis, assumenda accusamus cumque
+												perferendis eos aut quidem! Aut, totam rerum, cupiditate quae aperiam voluptas rem inventore quas, ex
+												maxime culpa nam soluta labore at amet nihil laborum? Explicabo numquam, sit fugit, voluptatem autem atque
+												quis quam voluptate fugiat earum rem hic, reprehenderit quaerat tempore at. Aperiam.
+											</p>
+											<p class="pull-right">-Sanchit Singh</p>
+											<br>
+											<hr>
+											<br>
+											Enter Your Answer.
+											<textarea class="form-control" aria-label="With textarea"></textarea>
+											<br>
+											id="submitBtn"
+										</div>
+								</li>
+
+								<li class="blog-item-holder">
+									<a class="cd-faq-trigger" href="#0" style="text-decoration: none;">Starting your own project</a>
+									<div class="container cd-faq-content">
+										<div class="main col-sm-1">
+											<a id="upButton" type="button" onclick="upVote()" class="vote triangle-up"></a>
+											<h2 class="scoreCounter"></h2>
+											<a id="downButton" type="button" onclick="downVote()" class="vote triangle-down">
+											</a>
+										</div>
+										<div class="col-sm-7" style="text-align: left">
+											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae quidem blanditiis delectus corporis,
+												possimus officia sint sequi ex tenetur id impedit est pariatur iure animi non a ratione reiciendis nihil
+												sed consequatur atque repellendus fugit perspiciatis rerum et. Dolorum consequuntur fugit deleniti, soluta
+												fuga nobis. Ducimus blanditiis velit sit iste delectus obcaecati debitis omnis, assumenda accusamus cumque
+												perferendis eos aut quidem! Aut, totam rerum, cupiditate quae aperiam voluptas rem inventore quas, ex
+												maxime culpa nam soluta labore at amet nihil laborum? Explicabo numquam, sit fugit, voluptatem autem atque
+												quis quam voluptate fugiat earum rem hic, reprehenderit quaerat tempore at. Aperiam.
+											</p>
+											<p class="pull-right">-Aditya Manze</p>
+											<br>
+											<hr>
+											<br>
+											Enter Your Answer.
+											<textarea class="form-control" aria-label="With textarea"></textarea>
+											<br>
+											id="submitBtn"
+										</div>
+								</li>
+
+								<li class="blog-item-holder">
+									<a class="cd-faq-trigger" href="#0" style="text-decoration: none;">Creating an application</a>
+									<div class="container cd-faq-content">
+										<div class="main col-sm-1">
+											<a id="upButton" type="button" onclick="upVote()" class="vote triangle-up"></a>
+											<h2 class="scoreCounter"></h2>
+											<a id="downButton" type="button" onclick="downVote()" class="vote triangle-down">
+											</a>
+										</div>
+										<div class="col-sm-7" style="text-align: left">
+											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae quidem blanditiis delectus corporis,
+												possimus officia sint sequi ex tenetur id impedit est pariatur iure animi non a ratione reiciendis nihil
+												sed consequatur atque repellendus fugit perspiciatis rerum et. Dolorum consequuntur fugit deleniti, soluta
+												fuga nobis. Ducimus blanditiis velit sit iste delectus obcaecati debitis omnis, assumenda accusamus cumque
+												perferendis eos aut quidem! Aut, totam rerum, cupiditate quae aperiam voluptas rem inventore quas, ex
+												maxime culpa nam soluta labore at amet nihil laborum? Explicabo numquam, sit fugit, voluptatem autem atque
+												quis quam voluptate fugiat earum rem hic, reprehenderit quaerat tempore at. Aperiam.
+											</p>
+											<p class="pull-right">-Sanchit Singh</p>
+											<br>
+											<hr>
+											<br>
+											Enter Your Answer.
+											<textarea class="form-control" aria-label="With textarea"></textarea>
+											<br>
+											id="submitBtn"
+										</div>
+								</li>
+							</ul> <!-- cd-faq-group -->
+
+							<ul id="workingwithviews" class="cd-faq-group">
+								<li class="cd-faq-title">
+									<h2>Working with Views</h2>
+								</li>
+								<li class="blog-item-holder">
+									<a class="cd-faq-trigger" href="#0" style="text-decoration: none;">Displaying a simple template</a>
+									<div class="container cd-faq-content">
+										<div class="main col-sm-1">
+											<a id="upButton" type="button" onclick="upVote()" class="vote triangle-up"></a>
+											<h2 class="scoreCounter"></h2>
+											<a id="downButton" type="button" onclick="downVote()" class="vote triangle-down">
+											</a>
+										</div>
+										<div class="col-sm-7" style="text-align: left">
+											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae quidem blanditiis delectus corporis,
+												possimus officia sint sequi ex tenetur id impedit est pariatur iure animi non a ratione reiciendis nihil
+												sed consequatur atque repellendus fugit perspiciatis rerum et. Dolorum consequuntur fugit deleniti, soluta
+												fuga nobis. Ducimus blanditiis velit sit iste delectus obcaecati debitis omnis, assumenda accusamus cumque
+												perferendis eos aut quidem! Aut, totam rerum, cupiditate quae aperiam voluptas rem inventore quas, ex
+												maxime culpa nam soluta labore at amet nihil laborum? Explicabo numquam, sit fugit, voluptatem autem atque
+												quis quam voluptate fugiat earum rem hic, reprehenderit quaerat tempore at. Aperiam.
+											</p>
+											<p class="pull-right">-Raj Kotadia</p>
+											<br>
+											<hr>
+											<br>
+											Enter Your Answer.
+											<textarea class="form-control" aria-label="With textarea"></textarea>
+											<br>
+											id="submitBtn"
+										</div>
+								</li>
+
+								<li class="blog-item-holder">
+									<a class="cd-faq-trigger" href="#0" style="text-decoration: none;">Adding external templates</a>
+									<div class="container cd-faq-content">
+										<div class="main col-sm-1">
+											<a id="upButton" type="button" onclick="upVote()" class="vote triangle-up"></a>
+											<h2 class="scoreCounter"></h2>
+											<a id="downButton" type="button" onclick="downVote()" class="vote triangle-down">
+											</a>
+										</div>
+										<div class="col-sm-7" style="text-align: left">
+											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae quidem blanditiis delectus corporis,
+												possimus officia sint sequi ex tenetur id impedit est pariatur iure animi non a ratione reiciendis nihil
+												sed consequatur atque repellendus fugit perspiciatis rerum et. Dolorum consequuntur fugit deleniti, soluta
+												fuga nobis. Ducimus blanditiis velit sit iste delectus obcaecati debitis omnis, assumenda accusamus cumque
+												perferendis eos aut quidem! Aut, totam rerum, cupiditate quae aperiam voluptas rem inventore quas, ex
+												maxime culpa nam soluta labore at amet nihil laborum? Explicabo numquam, sit fugit, voluptatem autem atque
+												quis quam voluptate fugiat earum rem hic, reprehenderit quaerat tempore at. Aperiam.
+											</p>
+											<p class="pull-right">-Akash Rajpurohit</p>
+											<br>
+											<hr>
+											<br>
+											Enter Your Answer.
+											<textarea class="form-control" aria-label="With textarea"></textarea>
+											<br>
+											id="submitBtn"
+										</div>
+								</li>
+							</ul> <!-- cd-faq-group -->
+						</div> <!-- cd-faq-items -->
+						<a href="#0" class="cd-close-panel">Close</a>
+					</section> <!-- cd-faq -->
+				</div>
+			</div>
+			<div class="site-wrapper">
+				<div id="content" class="site-content center-relative">
+					<!--Footer-->
+					<footer class="footer">
+						<div class="footer-content content-1070 center-relative">
+
+							<ul class="copyright-holder">
+								<li class="copyright-footer">
+									© 2018 InSync.</li>
+								<li class="social-footer">
+									<a href="#">Twitter</a><a href="#">Facebook</a><a href="#">Instagram</a><a href="#">Behance</a> </li>
+							</ul>
+						</div>
+					</footer>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--Load JavaScript-->
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/jquery.sticky.js"></script>
+	<script type='text/javascript' src='js/imagesloaded.pkgd.js'></script>
+	<script type='text/javascript' src='js/jquery.fitvids.js'></script>
+	<script type='text/javascript' src='js/jquery.smartmenus.min.js'></script>
+	<script type='text/javascript' src='js/isotope.pkgd.js'></script>
+	<script type='text/javascript' src='js/jquery.easing.1.3.js'></script>
+	<script type='text/javascript' src='js/jquery.prettyPhoto.js'></script>
+	<script type='text/javascript' src='js/countUp.min.js'></script>
+	<script type='text/javascript' src='js/slick.min.js'></script>
+	<script type='text/javascript' src='js/main.js'></script>
+	<script src="rajcontro/js/jquery-2.1.1.js"></script>
+	<script src="rajcontro/js/jquery.mobile.custom.min.js"></script>
+	<script src="rajcontro/js/main.js"></script>
+	<script src="rajcontro/js/upvote.js"></script>
+</body>
+
+</html>
